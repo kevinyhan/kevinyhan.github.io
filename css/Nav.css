@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400);
+/* Typography */
+/* Colors */
+/* Widths */
+.navbar {
+  background: #000099;
+  position: fixed;
+  z-index: 999;
+  height: 7.5vh;
+  width: 100%;
+  /* Menu toggle icon for mobile view */ }
+  .navbar__toggle {
+    display: none; }
+  .navbar__toggle__label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.75em; }
+  .navbar__toggle:checked ~ nav {
+    display: block; }
+
+.navbar__nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: left;
+  display: none;
+  transition: transform 250ms ease-in-out; }
+  .navbar__nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 75px 5px rgba(0, 0, 0, 0.1); }
+  .navbar__nav__item {
+    padding: 0.75em;
+    position: relative; }
+  .navbar__nav__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0.75em;
+    right: 0.75em;
+    z-index: 1;
+    height: 1px;
+    background: rgba(0, 0, 102, 0.25); }
+  .navbar__nav__link {
+    color: #000000;
+    text-decoration: none; }
+
+/* FontAwesome Icons */
+.fa-bars {
+  color: white; }
