@@ -11,13 +11,13 @@
   /* Menu toggle icon for mobile view */ }
   .navbar__toggle {
     display: none; }
-  .navbar__toggle__label {
+  .navbar__toggle__icon {
     display: flex;
     align-items: center;
     height: 100%;
     padding: 0.75em; }
-  .navbar__toggle:checked ~ nav {
-    display: block; }
+  .navbar__toggle:checked ~ .navbar__nav {
+    transform: scale(1, 1); }
 
 .navbar__nav {
   position: absolute;
@@ -25,7 +25,8 @@
   left: 0;
   right: 0;
   text-align: left;
-  display: none;
+  transform: scale(1, 0);
+  transform-origin: top;
   transition: transform 250ms ease-in-out; }
   .navbar__nav ul {
     margin: 0;
