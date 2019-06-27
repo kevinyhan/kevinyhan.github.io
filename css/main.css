@@ -72,6 +72,9 @@ a {
   background: rgba(76, 0, 200, 0.95); }
 
 .navbar__toggle {
+  background: none;
+  color: none;
+  border: none;
   padding-left: 0.75em; }
 
 .navbar__nav {
