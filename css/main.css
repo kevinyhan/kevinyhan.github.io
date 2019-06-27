@@ -1,11 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Muli:400);
 /* Typography */
-/* Colors */
-/* Dimensions */
-/* Media query breakpoints */
-/* Nav Dimensions */
-/* Z-Indexes */
-@import url(https://fonts.googleapis.com/css?family=Muli:400);
+/*
+    This variables file contains the following:
+        1. Widths
+            a. $min-width
+        2. Heights
+        3. Z-Indexes
+*/
+/* Used for media queries */
+/*
+    This variables file contains the following:
+        1. Widths
+            a. $min-width
+        2. Heights
+        3. Z-Indexes
+*/
+/* Used for media queries */
 *, *::before, *::after {
   box-sizing: inherit; }
 
@@ -16,130 +26,164 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  height: 300vh;
-  background-image: url(//unsplash.it/1000/1000); }
+  padding: 0; }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
   margin: 0;
   padding: 0; }
 
 a {
   text-decoration: none;
-  color: #000000; }
+  color: black; }
 
-.mobile__viewport {
-  position: absolute;
+#app {
+  position: relative;
+  padding-top: 8.5vh; }
+
+.container {
+  position: relative;
+  width: 100%; }
+
+/*
+    This variables file contains the following:
+        1. Widths
+            a. $min-width
+        2. Heights
+        3. Z-Indexes
+*/
+/* Used for media queries */
+/*
+    This variables file contains the following:
+        1. Widths
+            a. $min-width
+        2. Heights
+        3. Z-Indexes
+*/
+/* Used for media queries */
+.navbar {
+  position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh; }
-
-@media only screen and (min-width: 1000px) {
-  .container {
-    margin-left: 200px; } }
-
-/* Typography */
-/* Colors */
-/* Dimensions */
-/* Media query breakpoints */
-/* Nav Dimensions */
-/* Z-Indexes */
-.navbar {
-  position: absolute;
-  height: 8.5vh;
   width: 100%;
-  background: #000099; }
-  .navbar__toggle {
-    display: none; }
-  .navbar__toggle__icon {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0.75em; }
-  .navbar__toggle:checked ~ .navbar__nav {
-    transform: scale(1, 1); }
+  height: 8.5vh;
+  display: flex;
+  align-items: center;
+  background: rgba(76, 0, 200, 0.95); }
+
+.navbar__toggle {
+  padding-left: 0.75em; }
 
 .navbar__nav {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  text-align: left;
+  background: #ffffff;
   transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 250ms ease-in-out; }
+  transition: transform 250ms ease-in; }
   .navbar__nav ul {
-    position: relative;
-    z-index: 999;
     margin: 0;
     padding: 0;
     list-style: none;
-    background: #FFFFFF;
     box-shadow: 0px 0px 75px 5px rgba(0, 0, 0, 0.1); }
-  .navbar__nav__item {
-    position: relative;
-    padding: 0.75em; }
+  .navbar__nav--open {
+    transform: scale(1, 1); }
+
+.navbar__nav__item {
+  position: relative;
+  padding: 0.75em; }
+  .navbar__nav__item:last-of-type {
+    padding-bottom: 0.75em; }
   .navbar__nav__item::before {
     content: '';
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0.75em;
     right: 0.75em;
-    z-index: 100;
     height: 1px;
-    background: rgba(0, 0, 102, 0.25); }
+    background: rgba(83, 29, 171, 0.25); }
+  .navbar__nav__item:first-of-type::before {
+    display: none; }
 
-.navbar__logo {
-  display: none; }
-
-@media only screen and (min-width: 1000px) {
-  .navbar {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px;
-    background: #FFFFFF; }
-    .navbar__toggle__icon {
-      display: none; }
-  .navbar__nav {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none; }
-    .navbar__nav ul {
-      box-shadow: none; }
-    .navbar__nav__item {
-      position: relative;
-      z-index: 1;
-      padding: 1em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: color 100ms ease-in 50ms; }
-    .navbar__nav__item:hover .navbar__nav__link {
-      color: white; }
-    .navbar__nav__item::before {
-      display: none; }
-    .navbar__nav__item::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000066;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 200ms ease-in; }
-    .navbar__nav__item:hover::after {
-      transform: scaleX(1);
-      transform-origin: left; }
-  .navbar__logo {
-    display: block;
-    height: 150px;
-    width: 250px; } }
-
-/* FontAwesome Icons */
 .fa-bars {
   color: white; }
+
+/*
+    This variables file contains the following:
+        1. Widths
+            a. $min-width
+        2. Heights
+        3. Z-Indexes
+*/
+/* Used for media queries */
+/*
+    This variables file contains the following:
+        1. Widths
+            a. $min-width
+        2. Heights
+        3. Z-Indexes
+*/
+/* Used for media queries */
+.project.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.project__card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  border-radius: 0.75em;
+  overflow: hidden;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.1); }
+  .project__card:hover, .project__card:focus .project__image {
+    opacity: 0.5; }
+
+.project__card__image {
+  height: 15em;
+  width: 100%;
+  opacity: 1; }
+
+.project__card__title {
+  position: absolute;
+  z-index: 1;
+  padding: 0.5em 0 0.75em; }
+
+.project__filter-button {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 5.75em;
+  height: 5.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); }
+
+.project__filter-menu {
+  position: fixed;
+  z-index: 999;
+  top: 8.5vh;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 250ms ease-in; }
+  .project__filter-menu--open {
+    transform: scale(1, 1); }
+  .project__filter-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .project__filter-menu__item {
+    display: flex; }
