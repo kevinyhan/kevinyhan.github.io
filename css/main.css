@@ -1,104 +1,72 @@
-@import url(https://fonts.googleapis.com/css?family=Muli:400);
-/* Typography */
-/*
-    This variables file contains the following:
-        1. Widths
-            a. $min-width
-        2. Heights
-        3. Z-Indexes
-*/
-/* Used for media queries */
-/*
-    This variables file contains the following:
-        1. Widths
-            a. $min-width
-        2. Heights
-        3. Z-Indexes
-*/
-/* Used for media queries */
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
 *, *::before, *::after {
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
-  font-family: "Muli", sans-serif;
-  font-size: 1.125rem; }
+  box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 1.5rem;
+  font-family: "Nunito Sans", sans-serif; }
 
 h1, h2, h3 {
   margin: 0;
   padding: 0; }
 
 a {
-  text-decoration: none;
-  color: black; }
+  color: black;
+  text-decoration: none; }
 
 #app {
   position: relative;
-  padding-top: 8.5vh; }
+  width: 100%;
+  height: 2000px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(128, 0, 128, 0.25);
+  background-image: url(https://source.unsplash.com/tKnda8e9ejM/1500);
+  background-repeat: repeat;
+  background-position: top;
+  background-size: cover;
+  background-blend-mode: multiply; }
 
-.container {
-  position: relative;
-  width: 100%; }
-
-/*
-    This variables file contains the following:
-        1. Widths
-            a. $min-width
-        2. Heights
-        3. Z-Indexes
-*/
-/* Used for media queries */
-/*
-    This variables file contains the following:
-        1. Widths
-            a. $min-width
-        2. Heights
-        3. Z-Indexes
-*/
-/* Used for media queries */
 .navbar {
   position: fixed;
-  z-index: 999;
+  z-index: 0.75em;
   top: 0;
   left: 0;
   width: 100%;
-  height: 8.5vh;
+  height: 9%;
+  padding: 0.75em;
   display: flex;
   align-items: center;
-  background: rgba(76, 0, 200, 0.95); }
-
-.navbar__toggle {
-  background: none;
-  color: none;
-  border: none;
-  padding-left: 0.75em; }
+  background: purple; }
 
 .navbar__nav {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background: #ffffff;
-  transform: scale(1, 0);
+  font-size: 1em;
+  background: white;
   transform-origin: top;
   transition: transform 250ms ease-in; }
+  .navbar__nav--open {
+    transform: scale(1, 1); }
   .navbar__nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     box-shadow: 0px 0px 75px 5px rgba(0, 0, 0, 0.1); }
-  .navbar__nav--open {
-    transform: scale(1, 1); }
 
 .navbar__nav__item {
   position: relative;
-  padding: 0.75em; }
-  .navbar__nav__item:last-of-type {
-    padding-bottom: 0.75em; }
+  width: 100%;
+  padding: 0.5em;
+  padding-left: 0.75em;
+  padding-right: 0.75em; }
   .navbar__nav__item::before {
     content: '';
     position: absolute;
@@ -107,86 +75,119 @@ a {
     left: 0.75em;
     right: 0.75em;
     height: 1px;
-    background: rgba(83, 29, 171, 0.25); }
+    background: rgba(128, 0, 128, 0.25); }
   .navbar__nav__item:first-of-type::before {
     display: none; }
 
-.fa-bars {
-  color: white; }
+.navbar__toggle {
+  font-size: 2.25rem;
+  padding-left: 0.75em; }
 
-/*
-    This variables file contains the following:
-        1. Widths
-            a. $min-width
-        2. Heights
-        3. Z-Indexes
-*/
-/* Used for media queries */
-/*
-    This variables file contains the following:
-        1. Widths
-            a. $min-width
-        2. Heights
-        3. Z-Indexes
-*/
-/* Used for media queries */
-.project.container {
-  position: relative;
+@media only screen and (min-width: 768px) {
+  .navbar {
+    justify-content: space-between; }
+    .navbar .icon {
+      font-size: 1.625em;
+      color: white; } }
+
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    background: rgba(255, 255, 255, 0.85); }
+    .navbar .icon-container {
+      margin-right: 3em; }
+  .navbar__nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-left: 3em;
+    margin-right: auto;
+    background: none; }
+    .navbar__nav ul {
+      display: flex;
+      justify-content: center;
+      box-shadow: none; }
+  .navbar__nav__item::before {
+    top: 100%;
+    height: 0.35rem;
+    background: rgba(128, 0, 128, 0.95);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in-out; }
+  .navbar__nav__item:hover::before {
+    transform: scaleX(1);
+    transform-origin: left; }
+  .navbar__nav__item:first-of-type::before {
+    display: inline-block; } }
+
+.experience__section {
+  margin: 1.5em 0;
   display: flex;
   flex-direction: column;
-  text-align: center; }
+  width: 100%; }
 
-.project__card {
-  position: relative;
+.experience__header {
+  border: 1px solid black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 1em;
-  border-radius: 0.75em;
-  overflow: hidden;
-  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.1); }
-  .project__card:hover, .project__card:focus .project__image {
-    opacity: 0.5; }
+  text-transform: uppercase; }
 
-.project__card__image {
-  height: 15em;
+.experience__section__title {
+  font-weight: 700; }
+
+.timeline {
   width: 100%;
-  opacity: 1; }
-
-.project__card__title {
-  position: absolute;
-  z-index: 1;
-  padding: 0.5em 0 0.75em; }
-
-.project__filter-button {
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-  width: 5.75em;
-  height: 5.75em;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); }
+  flex-direction: column; }
 
-.project__filter-menu {
-  position: fixed;
-  z-index: 999;
-  top: 8.5vh;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 250ms ease-in; }
-  .project__filter-menu--open {
-    transform: scale(1, 1); }
-  .project__filter-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .project__filter-menu__item {
-    display: flex; }
+.timeline__section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid black; }
+
+.timeline__line-column {
+  flex-shrink: 1; }
+  .timeline__line-column .timeline__line-circle:first-of-type {
+    margin-top: 2em; }
+  .timeline__line-column .timeline__line-circle:last-of-type {
+    margin-bottom: 2em; }
+
+.timeline__line-circle {
+  margin: 4em;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid red; }
+
+.icon-container {
+  display: none; }
+
+.fa-bars {
+  font-size: 1.75rem;
+  color: white; }
+
+@media only screen and (min-width: 768px) {
+  .icon-container {
+    display: inline-block;
+    border-radius: 0.25em; }
+    .icon-container .icon {
+      font-size: 1.625em;
+      margin: 0.85rem; }
+    .icon-container a:last-of-type > .icon {
+      margin-right: 0; } }
+
+@media only screen and (min-width: 1024px) {
+  .icon-container {
+    position: relative; }
+    .icon-container .icon {
+      color: black;
+      transition: color 100ms ease-in-out; }
+      .icon-container .icon:hover {
+        color: purple; }
+    .icon-container .icon ~ .icon {
+      margin-left: 0; }
+  .fa-bars {
+    display: none; } }
