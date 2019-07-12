@@ -39,6 +39,12 @@ a {
     height: 100%;
     background: radial-gradient(rgba(16, 0, 28, 0.55) 0%, rgba(16, 0, 28, 0.85) 33%, rgba(16, 0, 28, 0.98) 100%); }
 
+.svg-container {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0; }
+
 .navbar {
   position: fixed;
   z-index: 1;
