@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --color-dark: #111111;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body > section {
+    min-height: 100vh;
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar__nav {
+    width: 100%;
+}
+
+.navbar__nav ul {
+    list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar__nav ul {
+        display: flex;
+    }
+}
